@@ -1,13 +1,15 @@
+import "../App.css";
+
 export default function Footer() {
   return (
     <>
       <p>Thanks for supporting us</p>
-      <nav>
+      <nav className="nav-b">
         <ul>
-          <li>
+          <li className="item-b">
             <a href="home"> Home</a>
           </li>
-          <li>
+          <li className="item-b">
             <a href="Book a table"> Rservations</a>
           </li>
         </ul>
