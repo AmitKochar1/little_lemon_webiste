@@ -6,15 +6,15 @@ export default function Header() {
       <header>
         <img src={logo} alt="Little Lemon" width="300px" height="100px" />
       </header>
-      <nav className="nav-a">
-        <ul className="item-a">
-          <li>
+      <nav>
+        <ul className="nav-a">
+          <li className="item-a">
             <a href="home">Home</a>
           </li>
-          <li>
+          <li className="item-a">
             <a href="aboutUs">About Us</a>
           </li>
-          <li>
+          <li className="item-a">
             <a href="Book a tablle">Reservations</a>
           </li>
         </ul>

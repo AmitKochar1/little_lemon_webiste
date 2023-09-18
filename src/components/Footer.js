@@ -4,12 +4,12 @@ export default function Footer() {
   return (
     <>
       <p>Thanks for supporting us</p>
-      <nav className="nav-b">
-        <ul>
-          <li className="item-b">
+      <nav>
+        <ul className="nav-a">
+          <li className="item-a">
             <a href="home"> Home</a>
           </li>
-          <li className="item-b">
+          <li className="item-a">
             <a href="Book a table"> Rservations</a>
           </li>
         </ul>
