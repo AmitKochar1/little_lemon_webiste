@@ -5,12 +5,12 @@ export default function Footer() {
     <>
       <p>Thanks for supporting us</p>
       <nav>
-        <ul className="nav-a">
-          <li className="item-a">
+        <ul >
+          <li >
             <a href="home"> Home</a>
           </li>
-          <li className="item-a">
-            <a href="Book a table"> Rservations</a>
+          <li>
+            <a href="Book a table"> Reservations</a>
           </li>
         </ul>
       </nav>
