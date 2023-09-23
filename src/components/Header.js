@@ -7,8 +7,8 @@ export default function Header() {
       <header >
         <img src={logo} alt="Little Lemon" width="300px" height="100px" />
       </header>
-      <nav>
-        <ul>
+      <nav >
+        <ul className="container">
           <li >
             <a href="home">Home</a>
           </li>

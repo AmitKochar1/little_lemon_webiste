@@ -5,12 +5,12 @@ export default function Footer() {
     <>
       <p>Thanks for supporting us</p>
       <nav>
-        <ul >
+        <ul className="container">
           <li >
-            <a href="home"> Home</a>
+            <a href="home"> About Us</a>
           </li>
           <li>
-            <a href="Book a table"> Reservations</a>
+            <a href="Book a table"> Contact Us </a>
           </li>
         </ul>
       </nav>

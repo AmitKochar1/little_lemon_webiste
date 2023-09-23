@@ -1,9 +1,9 @@
-import Articles from "./Articles";
+import Dishes from "./Dishes";
 
 export default function Menu(){
     return(
         <>
-        <Articles />
+            <Dishes />
         </>
     )
 }
