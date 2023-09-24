@@ -12,11 +12,8 @@ body{
   border-radius: 30px;
 }
 
-.container li {
+.containerLink {
   list-style-type: none;
-}
-
-.container a {
   display: inline-block;
   padding: 25px;
   margin: 0 55px;
@@ -36,25 +33,33 @@ header img {
   padding: 20px;
 }
 
-.article {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.article img {
-  display: block;
-  margin: 20px;
-  padding: 20px;
-}
-
 .card {
-  width: fit-content;
-  margin: 5px;
-  padding: 5px;
-  font-size: 20px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.box {
   border: 1px solid black;
   border-radius: 20px;
   background-color: #fff;
+  margin: 25px;
+  padding: 25px;
+  text-align: center;
+}
+
+.box img {
+  display: block;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 40px;
+}
+
+.box h1 {
+  font-size: large;
+}
+
+.box p {
+  font-size: medium;
+  flex-wrap: wrap;
 }
