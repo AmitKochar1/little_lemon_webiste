@@ -36,6 +36,7 @@ header img {
 .card {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .box {
@@ -45,6 +46,7 @@ header img {
   margin: 25px;
   padding: 25px;
   text-align: center;
+  flex: 1 1 calc(20% - 30px);
 }
 
 .box img {
