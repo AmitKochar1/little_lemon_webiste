@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <>
-      <p>Home is work in progress</p>
-    </>
+    <div>
+      <h1 className="header">Welcome to Little Lemon Restarauant</h1>
+    </div>
   );
 }

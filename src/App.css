@@ -40,13 +40,14 @@ header img {
 }
 
 .box {
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 20px;
   background-color: #fff;
   margin: 25px;
   padding: 25px;
   text-align: center;
-  flex: 1 1 calc(20% - 30px);
+  flex: 0 1 calc(20% - 10px);
+  font-size: 60px;
 }
 
 .box img {
@@ -64,4 +65,11 @@ header img {
 .box p {
   font-size: medium;
   flex-wrap: wrap;
+}
+
+.header {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 50px;
+  color: rgb(75, 95, 76);
 }
