@@ -1,8 +1,7 @@
 import "./App.css";
 import Home from "./pages/Home";
-import Menu from "./pages/Home";
 import Footer from "./components/Footer";
-import Reservations from "./pages/Reservations";
+import BookingPage from "./pages/BookingPage";
 import AboutUs from "./pages/AboutUs";
 import { Route, Routes, Link } from "react-router-dom";
 import Header from "./components/Header";
@@ -18,7 +17,7 @@ function App() {
       </nav>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/reservations' element={<Reservations />}/>
+        <Route path='/reservations' element={<BookingPage />}/>
         <Route path='/about-us' element={<AboutUs />}/>
       </Routes>
       <Footer />

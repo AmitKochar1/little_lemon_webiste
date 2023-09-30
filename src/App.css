@@ -79,11 +79,12 @@ header img {
   display: grid; 
   max-width: 200px; 
   gap: 20px;
+  border: 1px solid black;
+  padding: 20px;
+  align-items: center;
 }
 
 .formLabel{
-  display: flex;
   align-items: center;
-  flex-direction: row;
-  text-align: center;
+
 }
