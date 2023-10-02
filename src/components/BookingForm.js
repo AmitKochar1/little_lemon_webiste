@@ -1,21 +1,11 @@
 import { useState } from 'react';
 import '../App.css';
 
-function AvaiableTime() {
-  const timeArray = ['17:00', '18:00', '19:00', '20:00'];
-  const avaiableTime= timeArray.map((time) => <li key={time.toString()}>{time}</li>);
-  return(
-    <ul>{avaiableTime}</ul>
-  )
-}
 
-export default function BookingForm() {
+export default function BookingForm({time, onChange}) {
   const [name, setName] = useState('');
   const [date, setDate] = useState();
-  const [numberOfGuests, setNumberOfGuests] = useState('10');
-
-  
-  const [avatimes, setAvaTimes] = useState(AvaiableTime);
+  const [numberOfGuests, setNumberOfGuests] = useState('0');
 
 
   const handleName = (e) => {
@@ -38,7 +28,7 @@ export default function BookingForm() {
   }
     return (
       <div>
-        <form className='form' onSubmit={handleSubmit}>
+        <form className='form' onSubmit={handleSubmit} >
           <label className='formLabel'  htmlFor='name'> Name: 
             <input type='text' id='name' onChange={handleName} value={name}/>
           </label>
@@ -46,10 +36,12 @@ export default function BookingForm() {
             <input type='date' id='res-date'onChange={handleDate} value={date} />
           </label>
           <label className='formLabel' htmlFor='res-time'>Choose time:
-            <select id='res-time'>
-              <option>
-                <select>{avatimes}</select>
-              </option>
+            <select id='res-time' value={time} onChange={onChange}>
+              <option value='5:00pm'>5:00 pm</option>
+              <option value='6:00pm'>6:00 pm</option>
+              <option value='7:00pm'>7:00 pm</option>
+              <option value='8:00pm'>8:00 pm</option>
+              <option value='9:00pm'>9:00 pm</option>   
             </select>
           </label>
           <label className='formLabel' htmlFor='guests'>Number of guests:
@@ -62,9 +54,10 @@ export default function BookingForm() {
               <option value='Anniversary'>Anniversary</option>
             </select>
           </label>
-          <button disabled={!name} type='submit'>Book Your Table</button>
+          <button disabled={!name || !date } type='submit'>Book Your Table</button>
         </form>
       </div>
-    );
-  }
+  
+)}
+
   
