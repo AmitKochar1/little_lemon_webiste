@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import BookingPage from "./components/BookingPage";
 import AboutUs from "./components/AboutUs";
 import { Route, Routes, Link } from "react-router-dom";
-import Nav from "./components/Nav";
+import Navbar from "./components/Nav";
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
     //   </Routes>
     //   <Footer />
     // </div>
-    <Nav/>
+    <Navbar/>
   );
 }
 
