@@ -2,9 +2,6 @@ import BookingForm from "../components/BookingForm"
 import { useState } from "react";
 import { useReducer } from "react";          
 
-// function reducer(state, action) {
-//     if(action.type === "5:00pm") return ()
-// }
 
 export default function BookingPage(){
     // const  [state, dispatch] = useReducer(reducer, )
