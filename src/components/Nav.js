@@ -11,7 +11,7 @@ export default function Navbar() {
   return(
     <>
     <nav >
-      <a href='/'><img src={logo} alt='logo'/></a>
+      <a href='/'><img src={logo} alt='logo' width={300}/></a>
       <div>
         <ul  id='navbar' className={bar ?'#navbar': 'navbar active'}>
           <li><a href="/" className="active">

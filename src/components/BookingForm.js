@@ -10,7 +10,7 @@ export default function BookingForm(props) {
   const [people, setPeople] = useState('0');
   const [occasion, setOccasion] = useState('');
   const [comments, setComments] = useState('')
-  const [finalTime, setFinalTime] = useState(
+  const [finalTime, setFinalTime] = useState( ''
     // props.availableTimes.map((times) => <option> {times} </option>)
   )
 

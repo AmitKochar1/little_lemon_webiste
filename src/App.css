@@ -18,6 +18,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 40px;
 }
 
 #navbar li{
@@ -93,4 +94,17 @@ nav {
     font-size: 24px;
     cursor: pointer;
   }
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items:space-between;
+  padding: 50px;
+}
+
+.card div {
+  flex-grow: 2;
 }
