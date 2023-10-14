@@ -58,38 +58,40 @@ export default function BookingForm(props) {
     setPeople("0");
   }
     return (
+      <>
+      <h1>Book a Table</h1>
         <form className='form' onSubmit={handleSubmit} >
-          <div>
-            <label className='formLabel'  htmlFor='fullName'> Full Name: 
-              <input type='text' id='fullName' onChange={handleName} value={fullName} placeholder='Full Name'/>
+          <div className='formLabel'>
+            <label htmlFor='fullName'> Full Name: 
+              <input type='text' id='fullName' test-id-name='name' onChange={handleName} value={fullName} placeholder='Full Name'/>
             </label>
           </div>
 
-          <div>
+          <div className='formLabel'>
             <lable htmlFor='email'> Email Address:
               <input type='email' id='email' placeholder='Email Address' value={email} onChange={handleEmail}/>
             </lable>
           </div>
 
-          <div>
+          <div className='formLabel'>
             <lable htmlFor='phone'> Phone Number:
               <input type='tel' id='phone' placeholder='(xxx)-xxx-xxxx' value={tel} onChange={handleTel}/>
             </lable>
           </div>
 
-          <div>
+          <div className='formLabel'>
             <label className='formLabel' htmlFor='guests'>Number of guests:
               <input type='number' id='guests' placeholder='1' min='1' max='10' value={people} onChange={handlePeople} />
             </label>
           </div>
 
-          <div>
+          <div className='formLabel'>
             <label className='formLabel' htmlFor='date'>Choose date: 
               <input type='date' id='date'onChange={handleDateChange} value={date} />
             </label>
           </div>
 
-          <div>
+          <div className='formLabel'>
             <label className='formLabel' htmlFor='time'>Choose time:
             <select id='time' required>
               {finalTime}
@@ -97,7 +99,7 @@ export default function BookingForm(props) {
             </label>
           </div>
           
-          <div>
+          <div className='formLabel'>
             <label className='formLabel' htmlFor='occasion'>Occasion:
               <select id='occasion' value={occasion} onChange={handleOcassion}>
                 <option>None</option>
@@ -109,13 +111,15 @@ export default function BookingForm(props) {
             </label>
           </div>
 
-          <div>
+          <div className='formLabel'>
             <label htmlFor='comments'>Additonal Comments:
             <textarea id='comments' placeholder='Additonal Comments' value={comments} onChange={handleComments}/>            
             </label>
           </div>
+          
           <button disabled={!fullName} type='submit'>Book Your Table</button>
         </form>
+        </>
 )}
 
   
