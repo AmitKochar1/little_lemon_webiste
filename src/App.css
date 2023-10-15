@@ -1,54 +1,116 @@
-
-body{
-  background-color: hsl(40, 9%, 87%);
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container {
-  background-color: rgb(113, 136, 115);
+nav {
   display: flex;
-  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(155, 189, 166);
+  padding: 20px 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  color: black;
+}
+
+#navbar{
+  display: flex;
+  align-items: center;
   justify-content: center;
-  border: 1px solid white;
-  border-radius: 30px;
-  margin: 20px;
+  padding: 40px;
 }
 
-.containerLink {
-  list-style-type: none;
-  display: inline-block;
-  padding: 15px;
-  margin: 0 55px;
-  text-align: center;
+#navbar li{
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+#navbar li a {
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: white;
+  transition: 0.3s  ease-in-out;
 }
 
-.container a:hover{
-  background-color: lightsteelblue;
+#navbar li a:hover,
+#navbar li a.active {
+  color: black;
 }
 
-header img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
+#navbar li a:hover::after,
+#navbar li a.active::after  {
+  content: '';
+  width: 20%;
+  height: 2px;
+  background: black;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+#mobile {
+  display: none;
+}
+
+#mobile i {
+  color: white;
+  align-items: center;
+}
+
+@media screen and (max-width:769px) {
+  #navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 84px;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background: rgb(155, 189, 166);
+    box-shadow: 0 40px 60px rgb(0,0,0, 0.1);
+    padding: 40px 0 0 10px;
+    transition: 0.3s ease-in-out;
+  }
+
+  #navbar.active{
+    right: 0px;
+  }
+
+
+  #navbar li {
+    margin-bottom: 25px;
+  }
+
+  #mobile {
+    display: block;
+  }
+
+  #mobile i{
+    font-size: 24px;
+    cursor: pointer;
+  }
 }
 
 .card {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .box {
-  border: 1px solid white;
+  border: 1px solid rgb(10, 10, 10);
   border-radius: 20px;
   background-color: #fff;
-  margin: 25px;
-  padding: 25px;
+  margin: 15px;
+  padding: 20px;
   text-align: center;
-  flex: 0 1 calc(20% - 10px);
-  font-size: 60px;
+  flex: 0 1 calc(30% - 10px);
 }
 
 .box img {
@@ -61,30 +123,25 @@ header img {
 
 .box h1 {
   font-size: large;
+  padding-bottom: 10px;
 }
 
 .box p {
   font-size: medium;
-  flex-wrap: wrap;
-}
-
-.header {
-  text-align: center;
-  padding-top: 20px;
-  font-size: 50px;
-  color: rgb(75, 95, 76);
+  flex-grow: 1;
+  padding-bottom: 10px;
 }
 
 .form{
-  display: grid; 
-  max-width: 200px; 
-  gap: 20px;
-  border: 1px solid black;
-  padding: 20px;
-  align-items: center;
+  display: grid;
+  padding: 50px;
+  justify-content: center;
+  max-width: auto;
 }
 
 .formLabel{
   align-items: center;
-
+  padding: 15px;
+  gap: 10px;
+  align-items: center;
 }

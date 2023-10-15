@@ -1,70 +1,125 @@
 import { useState } from 'react';
 import '../App.css';
 
-function AvaiableTime() {
-  const timeArray = ['17:00', '18:00', '19:00', '20:00'];
-  const avaiableTime= timeArray.map((time) => <li key={time.toString()}>{time}</li>);
-  return(
-    <ul>{avaiableTime}</ul>
-  )
-}
 
-export default function BookingForm() {
-  const [name, setName] = useState('');
+export default function BookingForm(props) {
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [tel, setTel] = useState('');
   const [date, setDate] = useState();
-  const [numberOfGuests, setNumberOfGuests] = useState('10');
-
-  
-  const [avatimes, setAvaTimes] = useState(AvaiableTime);
-
+  const [people, setPeople] = useState('0');
+  const [occasion, setOccasion] = useState('');
+  const [comments, setComments] = useState('')
+  const [finalTime, setFinalTime] = useState( ''
+    // props.availableTimes.map((times) => <option> {times} </option>)
+  )
 
   const handleName = (e) => {
-    setName(e.target.value);
+    setFullName(e.target.value);
   }
 
-  const handleDate = (e) => {
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+  }
+
+  const handleTel = (e) => {
+    setTel(e.target.value);
+  }
+
+  const handlePeople = (e) => {
+    setPeople(e.target.value);
+  }
+
+  const handleOcassion = (e) => {
+    setOccasion(e.target.value);
+  }
+
+  const handleComments = (e) => {
+    setComments(e.target.value);
+  }
+
+  function handleDateChange(e){
     setDate(e.target.value);
-  }
 
-  const handleGuests = (e) => {
-    setNumberOfGuests(e.target.value);
+    var dateString = e.target.value;
+    const date = new Date(dateString);
+
+    props.updateTimes(date);
+    
+    setFinalTime('')
+
+    // setFinalTime(props.availableTimes.map((times) => <option>{times}</option>))
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
     alert('Your table has been booked!!');
-    setName("");
-    setNumberOfGuests("0");
+    setFullName("");
+    setPeople("0");
   }
     return (
-      <div>
-        <form className='form' onSubmit={handleSubmit}>
-          <label className='formLabel'  htmlFor='name'> Name: 
-            <input type='text' id='name' onChange={handleName} value={name}/>
-          </label>
-          <label className='formLabel' htmlFor='res-date'>Choose date: 
-            <input type='date' id='res-date'onChange={handleDate} value={date} />
-          </label>
-          <label className='formLabel' htmlFor='res-time'>Choose time:
-            <select id='res-time'>
-              <option>
-                <select>{avatimes}</select>
-              </option>
+      <>
+      <h1>Book a Table</h1>
+        <form className='form' onSubmit={handleSubmit} >
+          <div className='formLabel'>
+            <label htmlFor='fullName'> Full Name<br />
+              <input type='text' id='fullName' onChange={handleName} value={fullName} placeholder='Full Name'/>
+            </label>
+          </div>
+
+          <div className='formLabel'>
+            <label htmlFor='emailAdd'> Email Address<br />
+              <input type='email' id='emailAdd' onChange={handleEmail} value={email} placeholder='Email Address'/>
+            </label>
+          </div>
+
+          <div className='formLabel'>
+            <label htmlFor='teleNumber'>Phone Number <br />
+              <input type='phone' id='teleNumber' onChange={handleTel} value={tel} placeholder='TelePhone Number'/>
+            </label>
+          </div>
+
+          <div className='formLabel'>
+            <label className='formLabel' htmlFor='guests'>Number of guests:<br />
+              <input type='number' id='guests' placeholder='1' min='1' max='10' value={people} onChange={handlePeople} />
+            </label>
+          </div>
+
+          <div className='formLabel'>
+            <label className='formLabel' htmlFor='date'>Choose date:<br />
+              <input type='date' id='date'onChange={handleDateChange} value={date} />
+            </label>
+          </div>
+
+          <div className='formLabel'>
+            <label className='formLabel' htmlFor='time'>Choose time:<br />
+            <select id='time' required>
+              {finalTime}
             </select>
-          </label>
-          <label className='formLabel' htmlFor='guests'>Number of guests:
-            <input type='number' id='guests' placeholder='1' min='1' max='10' value={numberOfGuests} onChange={handleGuests} />
-          </label>
-          <label className='formLabel' htmlFor='occasion'>Occasion:
-            <select id='occasion'>
-              <option value='ocassion'>Choose an Occasion</option>
-              <option value='Birthday'>Birthday</option>
-              <option value='Anniversary'>Anniversary</option>
-            </select>
-          </label>
-          <button disabled={!name} type='submit'>Book Your Table</button>
+            </label>
+          </div>
+          
+          <div className='formLabel'>
+            <label className='formLabel' htmlFor='occasion'>Occasion:<br />
+              <select id='occasion' value={occasion} onChange={handleOcassion}>
+                <option>None</option>
+                <option>Birthday</option>
+                <option>Anniversary</option>
+                <option>Engagement</option>
+                <option>other</option>
+              </select>
+            </label>
+          </div>
+
+          <div className='formLabel'>
+            <label htmlFor='comments'>Additonal Comments:<br />
+            <textarea id='comments' placeholder='Additonal Comments' value={comments} onChange={handleComments}/>            
+            </label>
+          </div>
+          
+          <button disabled={!fullName} type='submit'>Book Your Table</button>
         </form>
-      </div>
-    );
-  }
+        </>
+)}
+
   

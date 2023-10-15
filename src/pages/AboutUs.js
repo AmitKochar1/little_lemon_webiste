@@ -1,7 +1,10 @@
-export default function AboutUS() {
+import Navbar from "../components/Nav";
+
+export default function AboutUs() {
     return (
       <>
-        <p>Home is work in progress</p>
+      <Navbar />
+        <p>About us page in progress</p>
       </>
     );
   }
