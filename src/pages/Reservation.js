@@ -4,15 +4,11 @@ import { useReducer } from "react";
 
 export default function Reservation(){
 
-    function updateTimes() {
-        return(<>
-        5:00pm
-        </>)
+    function updateTimes(date) {
+        return fetchAPI(date);
       }
-    function initializeTimes (){
-        return(<></>)
-    }
-    //   const output = fetchAPI(new Date());
+    
+    const initializeTimes = fetchAPI(new Date());
     
     //   const [availableTimes, dispatch] = useReducer(updateTimes, output);
 
