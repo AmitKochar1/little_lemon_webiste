@@ -1,10 +1,8 @@
 import Card from "../components/Card";
-import Navbar from "../components/Nav";
 
 export default function Home(){
     return(
         <>
-        <Navbar />
         <div className="card">
             <div className="box">
                 <Card

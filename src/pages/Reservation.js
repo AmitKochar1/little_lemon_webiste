@@ -22,7 +22,7 @@ export default function Reservation(){
         const isSubmitted = submitAPI(formData);
 
         if(isSubmitted){
-            navigate('/')
+            navigate('/confirmed')
         }
     }
 
