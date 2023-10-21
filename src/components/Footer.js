@@ -9,7 +9,7 @@ import image from '../Logos/Asset_20@4x.png'
 export default function Footer() {
   return (
     <footer className="footer">
-        <img src={image} alt='little lemon' width='100' height='150px'/>
+      <a href='/'><img src={image} alt='little lemon' width='100' height='150px'/></a>
         <div className="footer-element">
           <Link to='/' element={<Home />} className="footer-item">Home</Link>
           <Link to='/reservations' element={<Reservation/>} className="footer-item">Reservations</Link>

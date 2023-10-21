@@ -223,39 +223,34 @@ nav {
   align-items: center;
 }
 
-.topSection {
-  text-align: center;
-  text-transform: uppercase;
-  color: black ;
-  padding: 10px;
-}
 
-.topSection h1 {
+.topSectionH {
+  text-transform: uppercase;
   font-size: 2rem;
   font-weight: 500;
   padding: 20px;
   letter-spacing: 5px;
+  text-align: center;
 }
 
-.topSection p{
-  color: black ;
+.topSectionP{
   font-size: 1.2rem;
   font-weight: 400;
   padding: 20px;
-  text-align: center;
   text-transform: uppercase;
   letter-spacing: 5px;
+  text-align: center;
+ 
 }
 
-.topSection button{
-  justify-content: center;
-  border: 1px solid rgb(145, 136, 136);
-  background-color: rgb(155, 189, 166);
-  color: white;
-  font-size: 20px;
-  padding: 10px;
-  border-radius: 20px;
-  cursor: pointer;
+.text {
+  text-decoration: none;
+  transition: 0.2s  ease-in-out;
+  color: black;
+}
+
+.text:hover{
+  color: rgb(155, 189, 166);
 }
 
 @media screen and (max-width:769px) {
