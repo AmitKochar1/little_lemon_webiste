@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "../App.css";
 import logo from "../Logos/Logo.svg";
-import {Link} from 'react-router-dom';
 
 export default function Navbar() {
   const[bar, setBar] = useState(false);
@@ -35,10 +34,3 @@ export default function Navbar() {
     </>
   )  
 }
-
-
-
-
-{/* <Link to='/'>Home</Link>
-       <Link to='/reservations'>Reservation</Link>
-       <Link to='/about-us'>About Us</Link> */}

@@ -7,7 +7,7 @@ export default function Card({image, name, id, description, cost}){
                 <img src={image} alt={name} width={300} height={300}/>
                 <h1 id={id}>{name}</h1>
                 <p>{description}</p>
-                <p>{cost}</p>
+                <p>Price: {cost}</p>
             </div>
         
     )
