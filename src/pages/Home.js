@@ -1,8 +1,11 @@
 import Card from "../components/Card";
+import TopSection from "../components/TopSection";
 
 export default function Home(){
     return(
-        <>
+        <div>
+            <TopSection />
+            <h1 className="menuHeading">Menu</h1>
         <div className="card">
             <div className="box">
                 <Card
@@ -68,7 +71,7 @@ export default function Home(){
                 />
             </div>
         </div>
-        </>
+        </div>
         
         
     )
